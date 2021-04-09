@@ -1,0 +1,8 @@
+// Сброс предмета из инвентаря
+if (Input.GetKeyDown(KeyCode.Q) && Items.Count > Item_Num)
+{
+Spawn_Item=Instantiate(Resources.Load("Prefabs/Item Objects/" + Items[Item_Num]) as GameObject);
+Spawn_Item.transform.position = new Vector3(transform.position.x, 0.01f, transform.position.z);
+Spawn_Item.name = Items[Item_Num];
+Items.RemoveAt(Item_Num);
+Update_Items();
