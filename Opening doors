@@ -1,0 +1,5 @@
+if (col.tag == "Doors" && Input.GetKey(KeyCode.E) && Items.Count <= Cells_Count)
+{
+if (Items.Find(x => x == "Key_Blue") == "Key_Blue" && col.name.Contains("Blue"))                col.GetComponentInChildren<Animator>().Play("Door_Open");
+if (Items.Find(x => x == "Key_Red") == "Key_Red" && col.name.Contains("Red"))              col.GetComponentInChildren<Animator>().Play("Door_Open");
+}
