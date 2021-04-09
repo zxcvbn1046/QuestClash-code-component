@@ -1,0 +1,14 @@
+if (Input.GetKeyDown(KeyCode.F) && Items.Find(x => x == "Light") == "Light")
+{
+if (transform.GetChild(0).gameObject.activeSelf == false)            transform.GetChild(0).gameObject.SetActive(true);
+else
+transform.GetChild(0).gameObject.SetActive(false);
+}
+if (Items.Find(x => x == "Light") != "Light")//Если объекта нет в инвентаре           transform.GetChild(0).gameObject.SetActive(false);
+// Активация записки, если игрок вошел в триггер
+if (Input.GetKeyDown(KeyCode.E) && Note_Trigger == true)
+{
+if (Canvas.transform.Find("Note_Canvas").gameObject.activeSelf == false)
+Canvas.transform.Find("Note_Canvas").gameObject.SetActive(true);
+else         Canvas.transform.Find("Note_Canvas").gameObject.SetActive(false);
+}
