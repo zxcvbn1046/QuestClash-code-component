@@ -1,0 +1,4 @@
+if (Input.GetAxis("Mouse ScrollWheel") > 0 && Item_Num < Cells_Count-1)
+Item_Num++;
+if (Input.GetAxis("Mouse ScrollWheel") < 0 && Item_Num > 0)
+Item_Num--;        Cell_Active.GetComponent<RectTransform>().anchoredPosition = new Vector2(((Item_Num-3) * 80)+40, Cell_1_Pos.y); 
