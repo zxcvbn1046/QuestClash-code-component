@@ -1,0 +1,7 @@
+// Приближение камеры
+if (Input.GetMouseButtonDown(2))
+Scale_Cam++;
+if (Scale_Cam % 2 != 0 && Camera.fieldOfView > 20)
+{
+Camera.fieldOfView-=2;
+if (Scale_Cam % 2 == 0 && Camera.fieldOfView < 40)
